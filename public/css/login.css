@@ -1,0 +1,142 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(/uploads/images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: rgb(250, 216, 171);
+    font-family: 'Cairo', sans-serif;
+    font-family: 'PT Serif', serif;
+}
+
+h1 {
+    padding-top: 8.5px;
+    text-align: center;
+}
+
+.loginstyle {
+    width: 380px;
+    height: 540px;
+    background: rgba(46, 30, 1, 0.915);
+    top: 55%;
+    left: 50%;
+    right: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    font-size: 12pt;
+    box-shadow: 20%;
+    border-radius: 10%;
+    border-style: double;
+    border-color: rgb(250, 216, 171);
+    border-width: 10px;
+    padding: 32px
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 70%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+    padding-bottom: 35px;
+}
+
+.form .input-field {
+    top: 15px;
+    left: 0;
+    position: relative;
+    height: 55px;
+    width: 230px;
+    margin-top: 25px;
+    border-radius: 20px;
+}
+
+.input-field input {
+    border-radius: 10px;
+    background-color: rgb(250, 216, 171);
+    position: absolute;
+    height: 56%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid rgb(250, 216, 171);
+    border-top: 3px solid transparent;
+}
+
+.input-field i {
+    font-size: 20pt;
+    color: rgb(46, 30, 1, 0.915);
+    position: absolute;
+    top: 50%;
+    left: 21;
+    transform: translateY(-75%);
+}
+
+.form .checkbox-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input {
+    margin: 0 8px -2px 4px;
+    accent-color: rgb(46, 30, 1, 0.915);
+}
+
+.form .text {
+    color: rgb(250, 216, 171);
+    font-size: 18px;
+}
+
+.form a {
+    text-decoration: none;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.form .button {
+    height: 125px;
+    width: 165px;
+    margin-top: 40px;
+    padding-left: 46px;
+}
+
+.form .button input {
+    background: url(/uploads/images/button\ login.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    border: none;
+    color: rgb(46, 30, 1, 0.915);
+    font-size: 30pt;
+    font-weight: bolder;
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover {
+    background-color: #F8EFAE;
+}
+
+.form .login-signup {
+    text-align: center;
+    justify-content: space-between;
+}

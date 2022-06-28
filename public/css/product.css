@@ -1,0 +1,38 @@
+body {
+    background-color:#eac5ca;
+    font-family: 'Cairo', sans-serif;
+    font-family: 'PT Serif', serif;
+}
+
+h1 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: rgb(60, 28, 1);
+    font-size: 45pt;
+    font-family: 'Cairo', sans-serif;
+    font-family: 'PT Serif', serif;
+}
+
+.table {
+    
+    text-shadow: 50%;
+    font-family: 'Cairo', sans-serif;
+    font-family: 'PT Serif', serif;
+    color: rgb(50, 30, 2);
+    font-size: 16.5pt;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+    padding: 15px;
+    border: 80px;
+    border: 2px solid rgb(59, 21, 3);
+    border-color: rgb(59, 21, 1);
+    caption-side: bottom;
+    background-color: rgba(150, 131, 108, 0.241);
+}
+.button{
+    background-color: rgb(102, 18, 67);
+}
+.thead{
+    background-color: rgb(102, 18, 67);  
+}

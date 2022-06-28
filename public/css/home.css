@@ -1,0 +1,124 @@
+body{
+    background-color:#eac5ca;
+    background-repeat: no-repeat;
+    background-size: cover;
+    place-items: center;
+    gap: 30px;
+ }
+ 
+ 
+ .left{
+    width: 270px ;
+    height: 600px;
+    position: relative;
+    background-color:  rgba(0, 0, 0, .5); 
+    margin-top: 150px;
+    margin-left: 30px;
+    border: 2px solid rgb(36, 24, 10);
+    border-radius: 30px 30px 30px 30px;
+ }
+ .left:hover{
+    background-color: white;
+       color:  rgba(0, 0, 0, .5);
+       transform: scale(1.03);
+       transition: all 1s ease;
+ }
+ 
+ 
+ .rightsection{
+    display: flex;
+    align-items: center;
+    margin-left: 1150px;
+    margin-bottom: 60px;
+ }
+ .rightsection form{
+    display: flex;
+    height: 30px;
+    width: 120px;
+   }
+ 
+   .rightsection input{
+   border-radius: 10px 0 0 10px; 
+   border: 1px solid #d3d3d3;
+   border-right: none;
+   }
+   .rightsection button{
+    border-radius: 0 10px 10px 0; 
+    border: 1px solid #d3d3d3;
+   background-color: #867373;
+   cursor: pointer;
+   }
+ 
+   .rightsection button:hover{
+    background-color: #790a0a;
+    color: #867373;
+    transition: .5s;
+   }
+  
+ .table2{
+    display: flex;
+    width:100px;
+    border-collapse: separate;
+    border-spacing: 5px;
+ 
+    }
+    
+ .table3{
+ display: flex;
+ width: 100px;
+ border-collapse: separate;
+ border-spacing: 5px;
+ 
+ }
+ 
+ hr.one{
+ height: 5px;
+ border:none;
+ background-color: rgb(24, 13, 13);
+ margin-left: 5px;
+ }
+ 
+ .card{
+ background-color:hwb(351 93% 4%);
+ 
+ border-radius: 100px 100px 100px 100px;
+ }
+ 
+ .card:hover{
+    background-color: rgba(87, 80, 80, 0.5);
+       color: rgb(240, 223, 203);
+       transform: scale(1.03);
+       transition: all 1s ease;
+ }
+ .card-image{
+ background-color:#F2B5BF;
+ margin-bottom: 5px;
+ align-items: center;
+ border-radius: 100px 100px 100px 100px;
+ }
+ 
+ .card h4{
+    text-align: center;
+    padding-top: 2px;
+    font: bold;
+ }
+ 
+ .card button{
+    width: 70px;
+    background-color: #F2B5BF;
+    border: 1px solid black;
+    border-radius: 5px 5px 5px 5px;
+    align-items: center;
+    margin-top: 20px;
+    color: #F2B5BF ;
+    cursor: pointer;
+    }
+    .card button:hover{
+       background-color: white;
+       color: rgba(0, 0, 0, .5);
+       transition: .5s;
+    
+    }
+    .form-select{
+      margin-right: 500px;
+    }
