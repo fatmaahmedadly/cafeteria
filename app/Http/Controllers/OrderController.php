@@ -55,7 +55,6 @@ class OrderController extends Controller
        } 
         $user=auth()->user();
         $data_user=User::find($request->user_id);
-        //dd($request->notes);
         if($user->id =="1")
         {
             $f=OrderCart::create([

@@ -1,5 +1,5 @@
 body{
-    background-color:#eac5ca;
+    background-color:rgb(199, 150, 94);
     background-repeat: no-repeat;
     background-size: cover;
     place-items: center;
@@ -8,53 +8,67 @@ body{
  
  
  .left{
-    width: 270px ;
-    height: 600px;
+
+    height: 800px;
+    width: 450px;
     position: relative;
-    background-color:  rgba(0, 0, 0, .5); 
-    margin-top: 150px;
+    margin-top: 0px;
     margin-left: 30px;
     border: 2px solid rgb(36, 24, 10);
     border-radius: 30px 30px 30px 30px;
  }
- .left:hover{
-    background-color: white;
-       color:  rgba(0, 0, 0, .5);
-       transform: scale(1.03);
-       transition: all 1s ease;
- }
  
- 
- .rightsection{
+ .form-select{
     display: flex;
     align-items: center;
-    margin-left: 1150px;
+    margin-left: 1250px;
     margin-bottom: 60px;
- }
- .rightsection form{
-    display: flex;
-    height: 30px;
-    width: 120px;
-   }
- 
-   .rightsection input{
-   border-radius: 10px 0 0 10px; 
-   border: 1px solid #d3d3d3;
-   border-right: none;
-   }
-   .rightsection button{
-    border-radius: 0 10px 10px 0; 
+    border-radius: 10px 10px 10px 10px; 
     border: 1px solid #d3d3d3;
-   background-color: #867373;
-   cursor: pointer;
-   }
- 
-   .rightsection button:hover{
-    background-color: #790a0a;
-    color: #867373;
-    transition: .5s;
-   }
+    border-right: none;
+    background-color:rgb(240, 223, 203) ;
+    color: rgb(61, 36, 7);
+    font-style: oblique;
+    
+ }
+ .table-tr1{
+   font-style: oblique;
+   border-bottom: 2px;
+
+ }
+ label{
+   font-size: large;
+   font-style: oblique;
+ }
+ .label1 input{
+   border-radius: 10px 10px 10px 10px;
+   background-color:rgb(241, 208, 170, 0.996) ;
+
+ }
+ .label1 textarea{
+   width: 250px;
+   height: 80px;
+   background-color:rgba(241, 208, 170, 0.996) ;
+   border: 2px solid black;
+   margin-bottom: 10px;
+
+ }
+ .button-confirm{
+   background-color:rgba(0, 0, 0, .2) ;
+   border-radius: 5px 5px 5px 5px;
+   border: 1px solid black;
+   color: black;
+   font-style: oblique;
   
+ }
+ .button-confirm:hover{
+   background-color: rgb(240, 223, 203);
+      color: rgba(0, 0, 0, .2);
+      transform: scale(1.03);
+      transition: all 1s ease;
+      
+   }
+
  .table2{
     display: flex;
     width:100px;
@@ -71,17 +85,15 @@ body{
  
  }
  
- hr.one{
- height: 5px;
- border:none;
- background-color: rgb(24, 13, 13);
- margin-left: 5px;
- }
  
  .card{
- background-color:hwb(351 93% 4%);
+ background-image:url('/uploads/images/b.jpg');
+ width: 225px;
+ height: 225px;
+ border-radius: 250px 250px 250px 250px;
+ margin-left: 5px;
+ margin-bottom: 35px;
  
- border-radius: 100px 100px 100px 100px;
  }
  
  .card:hover{
@@ -89,36 +101,40 @@ body{
        color: rgb(240, 223, 203);
        transform: scale(1.03);
        transition: all 1s ease;
- }
- .card-image{
- background-color:#F2B5BF;
- margin-bottom: 5px;
- align-items: center;
- border-radius: 100px 100px 100px 100px;
+       
  }
  
- .card h4{
-    text-align: center;
-    padding-top: 2px;
+
+ .card-title{
     font: bold;
- }
- 
- .card button{
-    width: 70px;
-    background-color: #F2B5BF;
-    border: 1px solid black;
-    border-radius: 5px 5px 5px 5px;
-    align-items: center;
-    margin-top: 20px;
-    color: #F2B5BF ;
-    cursor: pointer;
-    }
-    .card button:hover{
-       background-color: white;
-       color: rgba(0, 0, 0, .5);
-       transition: .5s;
+    margin-left: 25px;
+    font-style: oblique;
     
-    }
+ }
+
+.add{
+   width:50px;
+   height:50px;
+   border-radius: 200px 200px 200px 200px;
+}
+
+.button-add{
+   border-radius: 200px 200px 200px 200px;
+   border: 1px solid rgb(128, 100, 63);
+   margin-left: 100px;
+   margin-bottom: 150px;
+   
+
+}
+   .card-img{
+      border-radius: 200px 200px 200px 200px;
+      width: 150px;
+      height: 165px;
+      margin-left: 40px;
+      margin-top: 5px;
+
+   }
+    
     .form-select{
       margin-right: 500px;
     }

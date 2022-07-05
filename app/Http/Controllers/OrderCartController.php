@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\OrderCart;
 use App\Models\User;
 use App\Models\Order;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class OrderCartController extends Controller
@@ -17,19 +18,23 @@ class OrderCartController extends Controller
     public function index()
     {
         $allusers=User::all();
+        $data=OrderCart::all();
       if(request()->user_select)
       {
-        $data=OrderCart::where('user_id', request()->user_select)->get();
+        $users=User::where('id', request()->user_select)->get();
+        return view ('orders/checks',compact('allusers','data','users'));
       }
         elseif(request()->date)
         {
-            $data=OrderCart::whereDate('created_at', request()->date)->get();
+            $users=User::whereDate('created_at', request()->date)->get();
+            return view ('orders/checks',compact('allusers','data','users'));
         }else{
             $orders = Order::all();
-            $data=OrderCart::all();
+            $users=User::all();
+            
         }
           
-       return view ('orders/checks',compact('allusers','data'));
+       return view ('orders/checks',compact('users','data','allusers','orders'));
     }
     
 
@@ -83,9 +88,13 @@ class OrderCartController extends Controller
      * @param  \App\Models\OrderCart  $orderCart
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, OrderCart $orderCart)
+    public function update(Request $request, $orderCart)
     {
-        //
+       
+        $v=Ordercart::find($orderCart);
+        $v->status=$request['status_select'];
+        $v->save();
+        return redirect()->back();
     }
 
     /**
@@ -94,8 +103,10 @@ class OrderCartController extends Controller
      * @param  \App\Models\OrderCart  $orderCart
      * @return \Illuminate\Http\Response
      */
-    public function destroy(OrderCart $orderCart)
+    public function destroy($orderCart)
     {
-        //
+        $remove = Ordercart::find($orderCart);
+        $remove->delete();
+        return redirect()->back();
     }
 }

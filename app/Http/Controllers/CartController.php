@@ -16,11 +16,10 @@ class CartController extends Controller
      */
     public function index()
     {
-        $user=Auth()->user();//بيجيب بيانات اليوزير اللى داخل 
+       /* $user=Auth()->user();  //to show  data of login user
         $allcarts=$user->carts;
         $floos=Cart::where('user_id',$user->id)->sum('price');
-        //dd($floos);
-       return view('home', compact('allcarts','floos'));
+       return view('home', compact('allcarts','floos'));*/
     }
 
     /**
@@ -88,11 +87,9 @@ class CartController extends Controller
     {
     $cart_data=Product::find($id);
     $user=Auth()->user();
-   $total_price=($request->quantity * $cart_data->price); 
     Cart::create([
         "product_name"=> $cart_data->name,
-        "price"=> $total_price,
-        "quantity"=> $request->quantity,
+        "price"=> $cart_data->price,
         "image"=> $cart_data->image,     
         "user_id"=> $user->id, 
         "product_id"=>$cart_data->id,    

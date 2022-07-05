@@ -2,88 +2,74 @@
 <body>
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-            <div class="title">Register</div>
-                   <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
-                        @csrf
-                        <div class="user-details">
-                        <div class="input-box">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
-                                <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" requiredd autocomplete="name" autofocus>
+    <div class="title">Register</div>
+        <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+                    @csrf
+            <div class="user-details">
+                <div class="input-box">
+                <span class="details">{{ __('Name') }}</span>
+                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" requiredd autocomplete="name" placeholder="Enter User Name" autofocus>
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                                </div>
-                        </div>
-                <div class="input-box">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" requiredd autocomplete="email">
+                </div>
+                        <div class="input-box">
+                        <span class="details">{{ __('Email Address') }}</span>
+                            
+                        
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" requiredd autocomplete="email" placeholder="Enter Email Address">
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
+                            
                         </div>
                     <div class="input-box">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-                    <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" requiredd autocomplete="new-password">
+                    <span class="details">{{ __('Password') }}</span>
+                      
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" requiredd autocomplete="new-password" placeholder="Enter Password">
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
+                            
                         </div>
 
                         <div class="input-box">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" requiredd autocomplete="new-password">
-                            </div>
+                        <span class="details">{{ __('Confirm Password') }}</span>
+                         
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" requiredd autocomplete="new-password" placeholder="Enter Confirm Password">
+                            
                         </div>
                         <div class="input-box">
-                            <label for="room_no" class="col-md-4 col-form-label text-md-end">{{ __('room_no') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="room_no" type="text" class="form-control" name="room_no" requiredd autocomplete="room_no">
-                            </div>
+                        <span class="details">{{ __('room_no') }}</span>
+                            
+                                <input id="room_no" type="text" class="form-control" name="room_no" requiredd autocomplete="room_no" placeholder="Enter Room Number">
+                           
                         </div>
                         <div class="input-box">
-                            <label for="ext" class="col-md-4 col-form-label text-md-end">{{ __('ext') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="ext" type="text" class="form-control" name="ext" requiredd autocomplete="ext">
-                            </div>
+                        <span class="details">{{ __('ext') }}</span>
+                            <input id="ext" type="text" class="form-control" name="ext" requiredd autocomplete="ext" placeholder="Enter Ext Number">
                         </div>
-                        <div class="input-box">
-                            <label for="profile_picture" class="col-md-4 col-form-label text-md-end">{{ __('profile_picture') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="profile_picture" type="file" class="form-control" name="profile_picture" requiredd autocomplete="profile_picture">
-                            </div>
-                        </div>
-                       <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                        
+                        <label for="fileUpload"> <img src="uploads/images/reg/upload.png" class="logoupload">Upload Photo Profile</label> 
+                        <input id="profile_picture" type="file" name="profile_picture" requiredd autocomplete="profile_picture">
+                        <button type="submit" class="btn btn-warning"> {{ __('Register') }}</button>
+                        
+                        
             </div>
-        </div>
+        </form>
     </div>
 </div>
 @endsection
+@section('section2')
+<link rel="stylesheet" href="css/register.css">
+@endsection
+</body>
+
+
 

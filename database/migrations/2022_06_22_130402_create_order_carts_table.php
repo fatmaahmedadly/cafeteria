@@ -22,6 +22,7 @@ return new class extends Migration
             $table->integer('room_no');
             $table->integer('ext');
             $table->string('notes')->nullable();
+            $table->string('status')->nullable();
             $table->unsignedInteger('user_id');
             $table->timestamps();
         });

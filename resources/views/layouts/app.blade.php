@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+   
     
 
 </head>
@@ -32,7 +33,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
             </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <a class="nav-link" href="{{ route('home') }}">Home</a>
@@ -74,7 +75,7 @@
                                 </li>
                             @endif
                         @else
-                        <img src="/uploads/images/{{ Auth::user()->profile_picture }}" style="height:50px; width:50px;">
+                        <img src="/uploads/images/{{ Auth::user()->profile_picture }}" style="height:50px; width:50px; border-radius: 50px 50px 50px 50px;">
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

@@ -16,6 +16,7 @@ class OrderCart extends Model
         'room_no',
         'ext',
         'notes',
+        'status',
         'user_id'
     ];
     public  function user()

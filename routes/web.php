@@ -30,8 +30,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::post('/addcart/{id}', [App\Http\Controllers\CartController::class, 'addcart'])->name('addcart');
 Route::resource("/carts",CartController::class);
 Route::resource("/orders",OrderController::class);
-Route::post('/increment/{id}',[App\Http\Controllers\CartController::class,'increment'])->name('increment');
-Route::post('/decrement/{id}',[App\Http\Controllers\CartController::class,'decrement'])->name('decrement');
+Route::post('/increment/{id}',[App\Http\Controllers\CartController::class,'increment'])->name('cart.increment');
+Route::post('/decrement/{id}',[App\Http\Controllers\CartController::class,'decrement'])->name('cart.decrement');
 Route::get('/category', [App\Http\Controllers\CategoryController::class, 'index'])->name('category');
 Route::resource("/ordercart",OrderCartController::class);
 Route::get('/myorder', [App\Http\Controllers\CategoryController::class, 'myorders'])->name('category.myorder');

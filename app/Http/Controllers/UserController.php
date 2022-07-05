@@ -26,7 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view("auth/register")->with('add','Greate');;
+        return view("users/adduser");
     }
 
     /**
@@ -39,24 +39,29 @@ class UserController extends Controller
     {
         $request->validate([
             "name"=> "required",
-            "RoomNo"=> "required",
-            "ProfilePicture"=> "required",
-            "Ext"=> "required",
+            "email"=> "required",
+            "password"=> "required",
+            "room_no"=> "required",
+            "ext"=> "required",
+            "profile_picture"=> "required",
+            
            ]);
-           $image = $request->file("Profile Picture");
+           $image = $request->file("profile_picture");
 
            if($image){
                $imageDestinationPath ="uploads/images/";
                $clientimage = date("YmdHis").".".$image->getClientOriginalExtension();
                $image->move($imageDestinationPath,$clientimage);
-               $request->image = $clientimage;
+               $request->profile_picture= $clientimage;
            }
     
           User::create([
           "name"=>$request->name,
-         "RoomNo"=>$request->RoomNo ,
-         "ProfilePicture"=>$request->image,
-         "Ext"=>$request->category,
+          "email"=>$request->email,
+          "password"=>$request->password,
+         "room_no"=>$request->room_no ,
+         "ext"=>$request->ext,
+         "profile_picture"=>$request->profile_picture,
          ]);
          return redirect()->route("client.create");
     }
@@ -78,9 +83,10 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit($user)
     {
-        return view("users/edit",["users"=>$user]);
+        $data_user=User::find($user);
+        return view("users/edit",compact('data_user'));
     }
 
     /**
@@ -90,16 +96,21 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request,$user)
     {
-        $request_data =$request->all();
+        
+       $request_data=$request->all();
+       //dd($request_data);
         $request->validate([
             "name"=> "required",
-            "RoomNo"=> "required",
-            "ProfilePicture"=> "required",
-            "Ext"=> "required",
+            "email"=> "required",
+            "password"=> "required",
+            "room_no"=> "required",
+            "ext"=> "required",
+            "profile_picture"=> "required",
+            
            ]);
-           $image = $request->file("ProfilePicture");
+        $image = $request->file("profile_picture");
            if($image){
             $imageDestinationPath ="uploads/images/";
             $clientimage = date("YmdHis").".".$image->getClientOriginalExtension();

@@ -10,7 +10,9 @@
                     @csrf
                         <div class="input-field">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email') }}</label>
-                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            
+                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus >
+                            
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -43,6 +45,7 @@
                             <input type="submit" value="login">
                                     
                         </div>
+                  
 
                         <div>
                                 @if (Route::has('password.request'))
@@ -61,4 +64,6 @@
 @section('section2')
 <link rel="stylesheet" href="css/login.css">
 @endsection
+
+
 

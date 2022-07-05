@@ -1,5 +1,5 @@
-body{
-    background-color:hwb(350 71% 5%);
+.body{
+    background-color:rgb(16, 13, 11);
     background-repeat: no-repeat;
     background-size: cover;
     place-items: center;

@@ -4,7 +4,7 @@
         <div class="col-lg-12 margin-tb">
             
             <div class="pull-center">
-            <a class="btn btn-primary" href="{{ route('products.create') }}"> Create New Product</a>
+            <a class="btn" style="background-color:#351801;" href="{{ route('products.create') }}"><font color="#fee2b3"> Create New Product</font></a>
         </div>
         </div>
     @if ($message = Session::get('success'))
@@ -12,9 +12,9 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-    <table class="table">
-            <thead class=" table-warning ">
-                <tr class="thead">
+    <table class="containertable">
+            <thead class="tablehead">
+                <tr >
                     <th scope="col ">Product</th>
                     <th scope="col ">Price</th>
                     <th scope="col ">photo</th>
@@ -28,12 +28,12 @@
                 <td>{{ $s->price }}</td>
                 <td><img src="/uploads/images/{{$s->image }}" width="70px" height="70px"></td>
                 <td>
-                    <a class="btn btn-sm btn-info" href="#">Available</a>
-                    <a class="btn btn-sm btn-primary" href="{{ route('products.edit',$s->id) }}">Edit</a>
+                <button class="ff">Available</button>
+                <button class="ff"><a href="{{ route('products.edit',$s->id) }}">Edit</a></button>
                     <form action="{{ route('products.destroy',$s->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                        <button type="submit" class="ff">Delete</button>
                     </form>
                 </td>
             </tr>

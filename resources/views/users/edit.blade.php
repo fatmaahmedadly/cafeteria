@@ -4,18 +4,18 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+            <div class="card" style="background-color:#FEE2B3; margin-top:50px; border-radius:20px 20px;">
+                
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('client.update') }}">
+                    <form method="POST" action="{{ route('client.update',$data_user->id)}}" enctype="multipart/form-data">
                         @csrf
-
-                        <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
+                        @method('PUT')
+                        <div class="row mb-3" style="padding-top:50px;">
+                            <label for="name" class="col-md-4 col-form-label text-md-end"><strong>{{ __('Name') }}</strong></label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{$data_user->name}}" required autocomplete="name" style="background-color:#E2D1BC;" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -26,10 +26,10 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-end"><strong>{{ __('Email Address') }}</strong></label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{$data_user->email}}" required autocomplete="email" style="background-color:#E2D1BC;">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -40,33 +40,12 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+                            <label for="RoomNo" class="col-md-4 col-form-label text-md-end"><strong>{{ __('RoomNo') }}</strong></label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="RoomNo" type="text" class="form-control @error('room_no') is-invalid @enderror" value="{{$data_user->room_no}}" name="room_no" style="background-color:#E2D1BC;">
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="RoomNo" class="col-md-4 col-form-label text-md-end">{{ __('RoomNo') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="RoomNo" type="text" class="form-control @error('RoomNo') is-invalid @enderror" name="RoomNo">
-
-                                @error('RoomNo')
+                                @error('room_no')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -74,10 +53,10 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="Ext" class="col-md-4 col-form-label text-md-end">{{ __('Ext') }}</label>
+                            <label for="Ext" class="col-md-4 col-form-label text-md-end"><strong>{{ __('ext') }}</strong></label>
 
                             <div class="col-md-6">
-                                <input id="Ext" type="text" class="form-control @error('Ext') is-invalid @enderror" name="Ext" required autocomplete="new-password">
+                                <input id="Ext" type="text" class="form-control @error('Ext') is-invalid @enderror" name="Ext" value="{{$data_user->ext}}" required autocomplete="new-password" style="background-color:#E2D1BC;">
 
                                 @error('Ext')
                                     <span class="invalid-feedback" role="alert">
@@ -87,12 +66,12 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="ProfilePicture" class="col-md-4 col-form-label text-md-end">{{ __('ProfilePicture') }}</label>
+                            <label for="ProfilePicture" class="col-md-4 col-form-label text-md-end"><strong>{{ __('ProfilePicture') }}</strong></label>
 
                             <div class="col-md-6">
-                                <input id="ProfilePicture" type="file" class="form-control @error('ProfilePicture') is-invalid @enderror" name="ProfilePicture" required autocomplete="new-password">
-
-                                @error('ProfilePicture')
+                                <input id="ProfilePicture" type="file" class="form-control @error('profile_picture') is-invalid @enderror"  name="ProfilePicture" required autocomplete="new-password" style="background-color:#E2D1BC;">
+                                <img src="/uploads/images/{{$data_user->profile_picture}}" style="width:100px;height:100px; border-radius:20px 20px;">
+                                @error('profile_picture')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -102,8 +81,8 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                <button type="submit" class="btn" style="background-color:#C7965E">
+                                    {{ __('Update') }}
                                 </button>
                             </div>
                         </div>
