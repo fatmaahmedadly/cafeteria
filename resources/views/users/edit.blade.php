@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<body style=" background-image: linear-gradient(57deg,rgb(235, 203, 168)0%, rgb(229 187 139)47%, rgb(240, 165, 80)100%);">
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

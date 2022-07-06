@@ -52,9 +52,9 @@
                  </tbody>
                 </table>
           <label class="label1">Total Money:</labal>
-          <input type="text"  value="{{$floos}}"></br>
+          <input type="text"  value="{{$floos}}" class="label1-input"></br>
 
-<form action="{{ route('orders.store')}}" method="POST">
+<form action="{{route('orders.store')}}" method="POST">
                         @csrf
                         @foreach($allcarts as $cart)
                         <input type="text" name="product_name[]" value="{{$cart->product_name}}" hidden>
@@ -78,7 +78,7 @@
   @foreach($allproducts as $product)
   <div class="col-3">
   <div class="card">
-  <img  class= "card-img" src="uploads/images/{{$product->image}} "class="card-img-top" alt="...">
+  <img  class= "card-img" src="uploads/images/{{$product->image}} "class="card-img-top" >
   <div class="card-body">
     <h5 class="card-title">{{$product->name}}</h5>
     <h5 class="card-title"> {{$product->price}} EGP</h5>
@@ -116,4 +116,4 @@ $('#user_select').change(function()
 </script>
 @endsection
 </body>
-</html>
+

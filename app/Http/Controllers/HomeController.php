@@ -33,7 +33,7 @@ class HomeController extends Controller
         $floos=Cart::where('user_id',$user->id)->sum('price');
         $amount=Cart::where('user_id',$user->id)->count('quantity');
          
-        return view('home', compact('allproducts','allusers','allcarts','floos','amount'));
+        return view('home',compact('allproducts','allusers','allcarts','floos','amount'));
        
     }
    

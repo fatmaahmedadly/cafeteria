@@ -1,5 +1,5 @@
 .body{
-    background-color:rgb(16, 13, 11);
+    background-image: linear-gradient(57deg,rgb(227 146 52)0%, rgb(229 187 139)47%, rgb(225 144 53)100%);
     background-repeat: no-repeat;
     background-size: cover;
     place-items: center;

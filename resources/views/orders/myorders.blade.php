@@ -31,7 +31,7 @@
                <form action="{{route('ordercart.destroy',$s->id)}}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="delete">X</button>
+                        <button type="submit" class=" btn btn-danger delete1">X</button>
         </form>
             @endif
             </td>

@@ -1,4 +1,4 @@
-<body style="  background:rgb(212, 171, 121);  margin:0;padding:0;font-family: Adobe Garamond Pro Bold;">
+<body style="   background-image: linear-gradient(57deg,rgb(235, 203, 168)0%, rgb(229 187 139)47%, rgb(240, 165, 80)100%);  margin:0;padding:0;font-family: Adobe Garamond Pro Bold;">
 @extends('layouts.app')
 @section('content')
 <div class="container">

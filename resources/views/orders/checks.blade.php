@@ -14,17 +14,17 @@
   <option value="{{$user->id}}">{{$user->name}}</option>
   @endforeach
 </select>
-<button type="submit" class="btn btn-primary"> search</button>
+<button type="submit" class="btn"> search</button>
 </form>
 
 
-<table class="table table-bordered">
-        <tr>
+<table class="table-bordered">
+        <tr class="tr1-tr1">
             <th>Name</th>
             <th>Total Amount</th>
         </tr>
         @foreach($users as $k)
-        <tr>
+        <tr class="tr2-">
             @if($k->ordercart->sum('totalmoney')>0)
             <td> 
                 <button class="btn btn-sm btn-light" onclick="$('#t1-{{$k->id}}').toggle('slow')">+</button>

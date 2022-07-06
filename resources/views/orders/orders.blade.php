@@ -9,11 +9,11 @@
     
         <thead >
         <tr>
-        <th scope="2">Order Date</th>
-        <th scope="2">name</th>
-        <th scope="2">room</th>
+        <th scope="col">Order Date</th>
+        <th scope="col">name</th>
+        <th scope="col">room</th>
         <th scope="col">Ext</th>
-        <th scope="2">Action</th>
+        <th scope="col">Action</th>
         
       </tr>
         </thead>
@@ -37,6 +37,7 @@
 <option selected value="done">done</option>
 </select>
 <button type="submit" class="btn1">Submit</button>
+</form>
             </td>
             
         </tr>
